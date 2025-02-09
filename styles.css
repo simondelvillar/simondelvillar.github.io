@@ -19,6 +19,12 @@ h1 {
     color: #d32f2f;
 }
 
+h2 {
+    font-family: "Cedarville Cursive", serif;
+    font-size: 1.0em;
+    color: #d32f2f;
+}
+
 .buttons {
     margin-top: 20px;
 }
