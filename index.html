@@ -21,5 +21,26 @@
         </div>
     </div>
     <script src="script.js"></script>
+
+    
+    <!-- Hidden Audio Element -->
+    <audio id="background-music" autoplay style="display: none;">
+        <source src="Head Over Heels (mp3cut.net).mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        audio.muted = true; // Start muted to bypass autoplay restrictions
+        audio.play().then(() => {
+            audio.muted = false; // Unmute after playback starts
+        }).catch(err => {
+            console.error("Autoplay blocked:", err);
+            document.body.addEventListener('click', () => {
+                audio.play();
+            });
+        });
+    </script>
+
+
 </body>
 </html>
